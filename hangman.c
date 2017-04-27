@@ -1,7 +1,7 @@
 	#include <iostream>
 #include <string>
 using namespace std;
-//¬вод данных, чтение данных
+//Reading of data
 int main()
 {
   cout << "Please enter word to guess" << endl;

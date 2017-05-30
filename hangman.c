@@ -1,4 +1,4 @@
-	#include <iostream>
+#include <iostream>
 #include <string>
 using namespace std;
 
@@ -43,8 +43,10 @@ int main()
     }
     cout << "Guess a letter " << endl;
     getline(cin, guess);
-    if(guess.length() > 1){
-      if(guess == word){
+    if(guess.length() > 1)
+    {
+      if(guess == word)
+      {
         cout << "you win " << endl;
         break;
       }
@@ -69,4 +71,5 @@ int main()
     cout << endl;
   }
   return 0;
+}
 }

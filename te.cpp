@@ -23,7 +23,7 @@ int main(int argc, char* argv[])
             cout << "Play" << endl;
             system("start hangman.exe");
            // system("cls");
-            return 1;
+            return prompt_menu_item();
             break;
         case 2:
             cout << "Exit" << endl;

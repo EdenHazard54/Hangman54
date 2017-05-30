@@ -1,9 +1,10 @@
 	#include <iostream>
 #include <string>
 using namespace std;
-//Reading of data
+
 int main()
 {
+  
   cout << "Please enter word to guess" << endl;
   string word;
   getline(cin, word);
@@ -28,15 +29,16 @@ int main()
   while(1){
     if(wrong == 6)
     {
-      cout << "You lost, word is " << word << endl;
+      cout << "You lost, word is " << "word" << endl;
       break;
     }
+    system("cls");
     cout << Underscore << endl;
     cout << "There are " << word.length() << " letters" << endl;
     cout << "You have " << 6 - wrong << " more tries left" << endl;
     if(Underscore == word)
     {
-      cout << "You won" << endl;
+      cout << "You win" << endl;
       break;
     }
     cout << "Guess a letter " << endl;

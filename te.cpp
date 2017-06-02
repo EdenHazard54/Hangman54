@@ -5,7 +5,8 @@ using namespace std;
 
 int prompt_menu_item()
 {
-    int variant;
+    system("color E");
+	int variant;
     cout << "Main menu\n" << endl;
     cout << "1. Play\n"
          << "2. Exit\n"<<endl;
@@ -14,7 +15,7 @@ int prompt_menu_item()
     return variant;
 }
 
-int main(int argc, char* argv[])
+int main()
 {
     int variant = prompt_menu_item(); 
 
@@ -24,15 +25,19 @@ int main(int argc, char* argv[])
             system("start hangman.exe");
            // system("cls");
             return prompt_menu_item();
+           // system("cls");
+            return 1;
+            system("cls");
+            return main();
             break;
         case 2:
             cout << "Exit" << endl;
             exit(EXIT_SUCCESS);
 			break;  
 		default:        
-			cerr<<"Error"<<endl;
+			cout<<"Error"<<endl;
 			system("cls");
-			return prompt_menu_item();
+			return main();
 		//	exit(EXIT_FAILURE);
     }
     return 0;

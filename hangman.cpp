@@ -7,13 +7,9 @@ int main()
   system("cls");
   system("color E");
   int c;
-  cout << "Please enter word to guess and subject of your word for helping your opponent" << endl;
-  //cout << "and" << endl;
- // cout << "subject of your word" << endl;
-  string word,theme;
+  cout << "Please enter word to guess" << endl;
+  string word;
   getline(cin, word);
-  getline(cin, theme);
-  
   string copy = word;
   string Underscore;
   for(int i=0; i!=word.length(); i++)
@@ -41,10 +37,11 @@ int main()
     system("cls");
     cout << Underscore << endl;
     cout << "There are " << word.length() << " letters" << endl;
-    cout << "Subject of this word is" << " " << theme << endl;
     cout << "You have " << 6 - wrong << " more tries left" << endl;
     if(Underscore == word)
     {
+      cout << "You win" << endl;
+      cout << "You won" << endl;
       cout << "You win" << endl;
       system("PAUSE");
       return main();

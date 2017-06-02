@@ -1,2 +1,3 @@
-build: te.cpp
-	g++ -Wall te.cpp
+CFLAGS = -Wall -Werror
+
+.PHONY: clean all

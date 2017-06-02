@@ -27,7 +27,6 @@ int main()
   }
   string guess;
   int wrong=0;
-
   while(1){
     if(wrong == 6)
     {
@@ -65,7 +64,6 @@ int main()
 		{
 				return main();
 		}
-      //  return main();
         break;
       }
       else

@@ -4,10 +4,16 @@ using namespace std;
 
 int main()
 {
-  
-  cout << "Please enter word to guess" << endl;
-  string word;
+  system("cls");
+  system("color E");
+  int c;
+  cout << "Please enter word to guess and subject of your word for helping your opponent" << endl;
+  //cout << "and" << endl;
+ // cout << "subject of your word" << endl;
+  string word,theme;
   getline(cin, word);
+  getline(cin, theme);
+  
   string copy = word;
   string Underscore;
   for(int i=0; i!=word.length(); i++)
@@ -35,10 +41,13 @@ int main()
     system("cls");
     cout << Underscore << endl;
     cout << "There are " << word.length() << " letters" << endl;
+    cout << "Subject of this word is" << " " << theme << endl;
     cout << "You have " << 6 - wrong << " more tries left" << endl;
     if(Underscore == word)
     {
       cout << "You win" << endl;
+      system("PAUSE");
+      return main();
       break;
     }
     cout << "Guess a letter " << endl;
@@ -48,6 +57,18 @@ int main()
       if(guess == word)
       {
         cout << "you win " << endl;
+        system("PAUSE");
+        cout <<"Play again? Yes-1 No-0" << endl;
+        cin >>c;
+        if (c==0)
+        {
+        	break;
+		}
+		else
+		{
+				return main();
+		}
+      //  return main();
         break;
       }
       else
@@ -72,4 +93,4 @@ int main()
   }
   return 0;
 }
-}
+
